@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+h3 {
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+/* Panel del Guerrero */
+.guerrero-panel {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.guerrero-info {
+    text-align: center;
+}
+
+.avatar {
+    font-size: 5em;
+    margin-bottom: 10px;
+}
+
+.guerrero-info h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.vida-container {
+    position: relative;
+    background: rgba(255, 255, 255, 0.3);
+    height: 35px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.vida-barra {
+    height: 100%;
+    background: linear-gradient(90deg, #00f260 0%, #0575e6 100%);
+    width: 100%;
+    transition: width 0.3s ease;
+}
+
+.vida-texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Panel del Arma */
+.arma-panel, .habilidad-panel {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border-left: 5px solid #667eea;
+}
+
+.arma-actual, .habilidad-actual {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.arma-nombre, .habilidad-nombre {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.arma-danio {
+    background: #dc3545;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.habilidad-poder {
+    background: #28a745;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* Botones de Acción */
+.acciones {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.acciones button {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    min-width: 150px;
+}
+
+.acciones button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-atacar {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+}
+
+.btn-habilidad {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+}
+
+.btn-recibir-danio {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    color: white;
+}
+
+/* Panel de Cambio de Armas */
+.cambiar-armas {
+    background: #e9ecef;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.armas-disponibles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+.btn-cambiar-arma {
+    padding: 15px;
+    border: 2px solid #667eea;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 1em;
+}
+
+.btn-cambiar-arma:hover {
+    background: #667eea;
+    color: white;
+    transform: scale(1.05);
+}
+
+.btn-cambiar-arma small {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.btn-cambiar-arma:hover small {
+    color: white;
+}
+
+/* Consola */
+.consola {
+    background: #2d2d2d;
+    padding: 20px;
+    border-radius: 10px;
+    color: #00ff00;
+    font-family: 'Courier New', monospace;
+}
+
+.consola h3 {
+    color: #00ff00;
+    margin-bottom: 10px;
+}
+
+.consola-contenido {
+    max-height: 300px;
+    overflow-y: auto;
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+.mensaje {
+    padding: 5px;
+    border-bottom: 1px solid #444;
+}
+
+.mensaje:last-child {
+    border-bottom: none;
+}
+
+.mensaje-ataque {
+    color: #ff6b6b;
+}
+
+.mensaje-habilidad {
+    color: #4ecdc4;
+}
+
+.mensaje-cambio {
+    color: #ffe66d;
+}
+
+.mensaje-danio {
+    color: #ff9f43;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .acciones {
+        flex-direction: column;
+    }
+    
+    .armas-disponibles {
+        grid-template-columns: 1fr;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+}

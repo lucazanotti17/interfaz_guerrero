@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guerrero - Cambio de Arma por Agregación</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>⚔️ Sistema de Combate</h1>
+        
+        <!-- Panel del Guerrero -->
+        <div class="guerrero-panel">
+            <div class="guerrero-info">
+                <div class="avatar">🛡️</div>
+                <h2 id="guerrero-nombre">Guerrero</h2>
+                <div class="vida-container">
+                    <div class="vida-barra" id="vida-barra"></div>
+                    <span class="vida-texto" id="vida-texto">100/100 HP</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Panel del Arma Actual -->
+        <div class="arma-panel">
+            <h3>Arma Equipada:</h3>
+            <div class="arma-actual" id="arma-actual">
+                <span class="arma-nombre" id="arma-nombre">Espada de fuego</span>
+                <span class="arma-danio" id="arma-danio">⚔️ 30 daño</span>
+            </div>
+        </div>
+
+        <!-- Panel de Habilidades -->
+        <div class="habilidad-panel">
+            <h3>Habilidad Equipada:</h3>
+            <div class="habilidad-actual" id="habilidad-actual">
+                <span class="habilidad-nombre" id="habilidad-nombre">Curación</span>
+                <span class="habilidad-poder" id="habilidad-poder">✨ 25 poder</span>
+            </div>
+        </div>
+
+        <!-- Botones de Acción -->
+        <div class="acciones">
+            <button class="btn-atacar" id="btn-atacar">Atacar</button>
+            <button class="btn-habilidad" id="btn-habilidad">Usar Habilidad</button>
+            <button class="btn-recibir-danio" id="btn-recibir-danio">Recibir Daño (20)</button>
+        </div>
+
+        <!-- Panel de Cambio de Armas -->
+        <div class="cambiar-armas">
+            <h3>Cambiar Arma:</h3>
+            <div class="armas-disponibles">
+                <button class="btn-cambiar-arma" data-arma="espada">
+                    🗡️ Espada de fuego<br><small>30 daño</small>
+                </button>
+                <button class="btn-cambiar-arma" data-arma="arco">
+                    🏹 Arco mágico<br><small>20 daño</small>
+                </button>
+                <button class="btn-cambiar-arma" data-arma="hacha">
+                    🪓 Hacha de guerra<br><small>40 daño</small>
+                </button>
+                <button class="btn-cambiar-arma" data-arma="lanza">
+                    🔱 Lanza sagrada<br><small>35 daño</small>
+                </button>
+            </div>
+        </div>
+
+        <!-- Consola de Mensajes -->
+        <div class="consola">
+            <h3>Registro de Batalla:</h3>
+            <div class="consola-contenido" id="consola"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
